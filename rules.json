@@ -1,0 +1,67 @@
+{
+    "rules": [
+      {
+        "predicate": "All",
+        "conditions": [
+          {
+            "field": "Labels",
+            "predicate": "Contains",
+            "value": "STARRED"
+          },
+          {
+            "field": "Date",
+            "predicate": "Last",
+            "value": "1d"
+          }
+        ],
+        "actions": [
+          {
+            "action": "mark_as_read"
+          }
+        ]
+      },
+      {
+        "predicate": "All",
+        "conditions": [
+          {
+            "field": "From",
+            "predicate": "Contains",
+            "value": "naukri.com"
+          },
+          {
+            "field": "Date",
+            "predicate": "Last",
+            "value": "1d"
+          }
+        ],
+        "actions": [
+          {
+            "action": "move_to_label",
+            "label": "Job Alerts"
+          }
+        ]
+      },
+      {
+        "predicate": "All",
+        "conditions": [
+          {
+            "field": "From",
+            "predicate": "Contains",
+            "value": "linkedin.com"
+          },
+          {
+            "field": "Date",
+            "predicate": "Last",
+            "value": "1d"
+          }
+        ],
+        "actions": [
+            {
+                "action": "move_to_label",
+                "label": "Job Alerts"
+              }
+        ]
+      }
+    ]
+  }
+  
